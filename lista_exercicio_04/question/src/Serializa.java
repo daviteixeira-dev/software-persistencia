@@ -19,7 +19,6 @@ public class Serializa {
         File arquivo = new File("animes.xml");
 
         XmlMapper xml = new XmlMapper();
-        xml.writeValue(arquivo, lista);
         xml.enable(SerializationFeature.INDENT_OUTPUT);
         xml.writeValue(arquivo, animes);
     }
