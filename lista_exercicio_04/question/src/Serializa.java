@@ -12,7 +12,7 @@ public class Serializa {
         Anime n2 = new Anime(2, "Naruto Shippuden", "Shounen", 500);
 
         List<Anime> lista = new ArrayList<Anime>();
-
+        
         lista.add(n1);
         lista.add(n2);
         Animes animes = new Animes(lista);

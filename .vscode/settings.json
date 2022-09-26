@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": [
+        "lista_exercicio_05/question/src",
+        "lista_exercicio_04/question/src",
+        "trabalho_pratico_01/demo/src/main/java/com/example"
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
