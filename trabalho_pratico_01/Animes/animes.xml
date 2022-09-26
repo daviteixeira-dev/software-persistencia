@@ -1,0 +1,20 @@
+<ListaDeAnimes>
+  <Animes>
+    <Anime>
+      <id>1</id>
+      <nome>DBZ</nome>
+      <genero>shounen</genero>
+      <numeroEp>215</numeroEp>
+      <numeroTemporadas>5</numeroTemporadas>
+      <personagemPrincipal>Goku</personagemPrincipal>
+    </Anime>
+    <Anime>
+      <id>2</id>
+      <nome>Naruto Shipuden</nome>
+      <genero>Ninjas</genero>
+      <numeroEp>300</numeroEp>
+      <numeroTemporadas>6</numeroTemporadas>
+      <personagemPrincipal>Naruto</personagemPrincipal>
+    </Anime>
+  </Animes>
+</ListaDeAnimes>

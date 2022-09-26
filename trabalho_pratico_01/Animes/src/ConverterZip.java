@@ -1,13 +1,11 @@
-package com.example.com.example;
-
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.File;
+import java.util.Scanner;
+import java.io.IOException;
+import java.util.zip.ZipEntry;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Scanner;
-import java.util.zip.ZipEntry;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.util.zip.ZipOutputStream;
 
 public class ConverterZip {

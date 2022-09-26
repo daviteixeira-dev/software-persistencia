@@ -1,17 +1,11 @@
-package com.example.com.example;
-
 import java.io.File;
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.io.IOException;
-
-import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 public class Serializa {
-    public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException, JsonProcessingException {
+    public static void main(String[] args) throws Exception{
 
         System.out.println("========== Cadastro de Animes ==========");
 
@@ -19,43 +13,36 @@ public class Serializa {
         ArrayList<Anime> listaDeAnimes = new ArrayList<Anime>();
 
         System.out.print("Quantos animes você quer cadastrar? ");
-        String numeroDeAnimes_s = scanner.nextLine();
-        int numeroDeAnimes = Integer.parseInt(numeroDeAnimes_s);
+        int numeroDeAnimes = scanner.nextInt();
 
         System.out.println("========== INICIANDO ==========");
 
         // Laço de repetição
         for (int i = 0; i < numeroDeAnimes; i++) {
             System.out.print("ID do anime: ");
-            String id_string = scanner.nextLine();
-            int id = Integer.parseInt(id_string);
+            int id = scanner.nextInt();
 
             System.out.print("Nome do anime: ");
+            scanner.nextLine();
             String nome = scanner.nextLine();
 
             System.out.print("Genero do anime: ");
             String genero = scanner.nextLine();
 
             System.out.print("Numero de episodios do anime: ");
-            String numeroEp_string = scanner.nextLine();
-            int numeroEp = Integer.parseInt(numeroEp_string);
+            int numeroEp = scanner.nextInt();
 
             System.out.print("Numero de temporadas do anime: ");
-            String numeroTemporadas_string = scanner.nextLine();
-            int numeroTemporadas = Integer.parseInt(numeroTemporadas_string);
+            int numeroTemporadas = scanner.nextInt();
 
             System.out.print("Qual o nome do personagem principal? ");
+            scanner.nextLine();
             String personagemPrincipal = scanner.nextLine();
 
             System.out.println("====Anime cadastrado!====");
 
-            Anime n = new Anime();
-            n.setId(id);
-            n.setNome(nome);
-            n.setGenero(genero);
-            n.setNumeroEp(numeroEp);
-            n.setNumeroTemporadas(numeroTemporadas);
-            n.setPersonagemPrincipal(personagemPrincipal);
+            Anime n = new Anime(id,nome,genero,numeroEp,numeroTemporadas,personagemPrincipal);
+            
             listaDeAnimes.add(n);
         }
 
@@ -73,8 +60,10 @@ public class Serializa {
 
         System.out.println("Lista Cadastrada!");
 
+        Animes animes = new Animes(listaDeAnimes);
         ObjectMapper jsonString = new ObjectMapper();
-        jsonString.writerWithDefaultPrettyPrinter().writeValue(new File("animes.json"), listaDeAnimes); //animes
+        jsonString.enable(SerializationFeature.INDENT_OUTPUT);
+        jsonString.writeValue(new File("animes.json"), animes);
 
         scanner.close();
     }

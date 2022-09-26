@@ -1,0 +1,17 @@
+{
+  "animes" : [ {
+    "id" : 1,
+    "nome" : "DBZ",
+    "genero" : "shounen",
+    "numeroEp" : 215,
+    "numeroTemporadas" : 5,
+    "personagemPrincipal" : "Goku"
+  }, {
+    "id" : 2,
+    "nome" : "Naruto Shipuden",
+    "genero" : "Ninjas",
+    "numeroEp" : 300,
+    "numeroTemporadas" : 6,
+    "personagemPrincipal" : "Naruto"
+  } ]
+}

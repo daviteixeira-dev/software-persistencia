@@ -1,5 +1,3 @@
-package com.example.com.example;
-
 public class Anime {
     private int id;
     private String nome;
@@ -8,7 +6,7 @@ public class Anime {
     private int numeroTemporadas;
     private String personagemPrincipal;
     
-    public Anime(){}
+    public Anime() {}
 
     public Anime(int id, String nome, String genero, int numeroEp, int numeroTemporadas, String personagemPrincipal) {
         this.id = id;
@@ -69,7 +67,13 @@ public class Anime {
 
     @Override
     public String toString() {
-        return "Anime [genero=" + genero + ", id=" + id + ", nome=" + nome + ", numeroEp=" + numeroEp
-                + ", numeroTemporadas=" + numeroTemporadas + ", personagemPrincipal=" + personagemPrincipal + "]";
+        return "ListaDeAnimes{" +
+        "Animes='" + id + '\'' +
+        ", nome='" + nome + '\'' +
+        ", genero='" + genero + '\'' +
+        ", numeroEP='" + numeroEp + '\'' +
+        ", numeroTP='" + numeroTemporadas + '\'' +
+        ", personagem='" + personagemPrincipal + '\'' +
+        '}';
     }
-}
+ }
